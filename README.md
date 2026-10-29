@@ -2,13 +2,25 @@
 
 Colten Pike's professional portfolio: defense manufacturing experience, independent software development, robotics simulation, and systems prototypes. The emphasis is on credible evidence for software, cybersecurity, integration/test, and technical mission-support opportunities.
 
-**Reviewed October 26, 2026.** The website is [Index.html](Index.html). It is a static HTML/CSS page with no scripts, build step, analytics, or external asset dependencies.
+**Reviewed October 26, 2026.** The website is [index.html](index.html). It is a static HTML/CSS page with no scripts, build step, analytics, or external asset dependencies.
 
 ## View locally
 
-Open `Index.html` directly in a browser, or run `python3 -m http.server 8000` from the repository and visit `http://localhost:8000/Index.html`.
+Open `index.html` directly in a browser, or run `python3 -m http.server 8000` from the repository and visit `http://localhost:8000/`.
 
-The existing capitalized filename is preserved. A host expecting lowercase `index.html` needs an explicit entry-point setting or a separately reviewed rename. This revision does not enable hosting or certify a live deployment.
+## GitHub Pages
+
+The lowercase `index.html` is the canonical static entry point. `Index.html` is a small compatibility redirect for existing capitalized URLs; edit only `index.html` when updating portfolio content. The October 26 portfolio content and audit are preserved.
+
+Repository metadata reports Pages enabled, and an earlier Pages build from `main` completed successfully. The public root returned HTTP 404 before this entry-point fix. A successful build alone does not establish that the public portfolio works.
+
+Expected public URL: https://coltenpike2000.github.io/Colten-Portfolio/
+
+Publishing configuration: **Settings → Pages → Build and deployment → Deploy from a branch → main → /(root) → Save**. No custom workflow, build command, dependencies, or custom domain is required. Keep the existing configuration if it already publishes `main` from the root.
+
+After pushing, check the **pages build and deployment** run in Actions. Then verify the public root serves the portfolio, its section links work, and `Index.html` redirects to the lowercase page. If the public root still returns 404 after deployment, inspect Pages settings and the deployment logs before sharing it as live.
+
+Evidence links point directly to the rendered README on GitHub, including its section anchors, so they do not depend on how a static host handles Markdown.
 
 ## Professional profile
 
@@ -102,6 +114,6 @@ Publish one sanitized, reproducible project case study before expanding the proj
 
 ## Maintenance
 
-The original `Index.html` filename and section anchors (`about`, `projects`, `certs`, `skills`) are retained. The visual treatment remains teal-based, with readable cards, mobile layout, keyboard focus states, a skip link, reduced-motion support, and print styles. All project “evidence boundaries” links lead to actual sections in this README; they are documentation links, not source-code demonstrations.
+The canonical page is `index.html`; `Index.html` remains a compatibility redirect. Existing section anchors (`about`, `projects`, `certs`, `skills`) are retained. The visual treatment remains teal-based, with readable cards, mobile layout, keyboard focus states, a skip link, reduced-motion support, and print styles. All project “evidence boundaries” links lead to actual sections in this README; they are documentation links, not source-code demonstrations.
 
 Keep website and README claims aligned. Recheck dated results after substantive implementation changes. Original wording remains recoverable in Git history; no separate project repository or employer material is modified by this revision.
